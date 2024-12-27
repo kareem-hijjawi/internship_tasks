@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Habit Reminder</title>
+    <link rel="stylesheet" href="{% static 'habits/styles.css' %}">
+</head>
+<body>
+    <header>
+        <h1>🕒 Daily Habit Reminder</h1>
+    </header>
+    <main>
+        <section class="form-section">
+            <form method="POST">
+                {% csrf_token %}
+                <div class="form-group">
+                    {{ form.task_name.label_tag }} {{ form.task_name }}
+                </div>
+                <div class="form-group">
+                    {{ form.reminder_time.label_tag }} {{ form.reminder_time }}
+                </div>
+                <button type="submit" class="btn">➕ Add Habit</button>
+            </form>
+        </section>
+        <section class="habit-list-section">
+            <h2>Your Habits</h2>
+            <ul id="habit-list">
+                {% for habit in habits %}
+                    <li class="habit-item" data-time="{{ habit.reminder_time }}">
+                        <span class="habit-task">{{ habit.task_name }}</span>
+                        <span class="habit-time">{{ habit.reminder_time }}</span>
+                    </li>
+                {% endfor %}
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Daily Habit Reminder</p>
+    </footer>
+    <script src="{% static 'habits/script.js' %}"></script>
+</body>
+</html>
