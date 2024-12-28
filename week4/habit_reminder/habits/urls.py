@@ -1,6 +1,6 @@
 from django.urls import path
-from . import views
+from .views import HabitsListView
 
 urlpatterns = [
-    path('', views.index, name='index'), #url for the main page
+    path('', HabitsListView.as_view(), name='index'),  
 ]
