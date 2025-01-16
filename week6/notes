@@ -1,0 +1,62 @@
+1- its for empowering developers to build modular, maintainable, and 
+scalable applications.
+
+2- the core oop principles (classes, objects, inheritance, 
+encapsulation, polymorphism and abstraction.)
+
+3- programmers can leverage the full potential of python oop capabilities
+to design elegant and efficient solutions to complex problems.
+
+4- oop is a way of organizing code that uses objects and classes to 
+represent real world entites and their behavior.
+
+5- object has attributes thing that has specific data and can perform certain actions using methods.
+
+6- class is a collection of objects. classes are blueprint(design or the architecture) for creating objects.
+
+7- Some points on Python class:  
+
+Classes are created by keyword class.
+Attributes are the variables that belong to a class.
+Attributes are always public and can be accessed using the dot (.) operator. Example: Myclass.Myattribute
+
+
+8- class Dog:
+        species = "Canine"  # Class attribute
+
+        def __init__(self, name, age):
+            self.name = name  # Instance attribute
+            self.age = age  # Instance attribute
+
+    Explanation:
+
+class Dog: Defines a class named Dog.
+species: A class attribute shared by all instances of the class.
+__init__ method: Initializes the name and age attributes when a new object is created.
+
+
+9- python objects:
+an object is an instance of a class. it represents a specific implementation of the class and holds its own data.
+
+an object consist of:
+
+1- state: 
+    it is represented by the attributes and reflects the properties of an object.
+
+2- behavior:
+    it is represented by the methods of an object 
+3- identity:
+
+
+
+9-  // class is a template
+    // the static fields belongs to the class not to a certain object
+    // the instance fields, each object of a class can have its own instance field
+
+
+10- the variables will be on the class level.
+    and when we create an object and enter the fields(attributes) it will be saved in the memory with its values.
+    but static variables will be saved in the memory without assinging a value for it, but the objects
+    will indicate to the static variabel.
+
+11- and about the encapsulation (we use it for example for validation) like we cant let the user to (write).   
